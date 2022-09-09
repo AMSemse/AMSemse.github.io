@@ -1,0 +1,66 @@
+.center {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.chadcat {
+	max-width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+.listcenter {
+	text-align: center;
+  	list-style-position: inside;
+}
+
+h1 {
+	text-align: center;
+	font-size: 7vw;	
+}
+
+p {text-align: center;}
+
+#nav {
+	text-align: center;
+	line-height: 30px;
+}
+
+#nav li {
+	list-style: none;
+	margin: 0 20px;
+	display: inline;
+	
+}
+
+ol { 
+	display: inline-block;
+	padding: 20px;
+	border: 1px solid black;
+  	width: 50px;
+  	border-radius: 5px;
+}
+
+table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+}  
+
+th, td {
+	background-color: #66ffcc;
+}
+table.poyta {
+ 	 margin-left: auto; 
+ 	 margin-right: auto;
+	 width:60%;
+}
+
+ul {padding: 0;}
+
+li a {text-decoration: none;}
+
+li a:hover {color: green;}
