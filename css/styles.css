@@ -45,18 +45,36 @@ ol {
   	border-radius: 5px;
 }
 
-table, th, td {
-	border: 1px solid white;
-	border-collapse: collapse;
-}  
-
-th, td {
+th.eka, td.eka {
 	background-color: #66ffcc;
+	text-align: center;
+	border: 1px solid white;
+  	border-collapse: collapse;
 }
 table.poyta {
- 	 margin-left: auto; 
- 	 margin-right: auto;
-	 width:60%;
+ 	margin-left: auto; 
+ 	margin-right: auto;
+	width:60%;
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+
+th.toka, td.toka {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+table.eripoyta {
+	width: 30%;
+	border-collapse: collapse;
+	font-family: arial, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr.toka:nth-child(even) {
+	background-color: #dddddd;
 }
 
 ul {padding: 0;}
