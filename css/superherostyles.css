@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Header styles */ 
+
+.float-container {
+  background-color: black;
+  padding-top: 25px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 25px;
+}
+
+header img {
+  margin: 0 auto;
+  border: 30px solid black;
+  border-radius: 280px;
+}
+
+header h1 {
+  color: white;
+  font-size: 50px;
+}
+
