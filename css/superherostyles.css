@@ -1,12 +1,12 @@
-/* Body style */
+							/* Body style */
 
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Header style */
-
+							/* Header style */
+	
 .headercontainer {
   margin: 0;
   width: 100%
@@ -48,7 +48,7 @@ h1 {
   font-size: 20vw;
 }
 
-/* Section 1 style */
+							/* Section 1 style */
 
 .section1container {
   margin: 0;
@@ -78,13 +78,13 @@ h1 {
 }
 
 .section1image {
-  width: 100%;
+  width: 85%;
   height: auto;
   border: 10px solid white;
   border-radius: 100px;
 }
 
-h2 {
+.section1text h2 {
   font-family: 'Indie Flower', cursive;
   font-size: 38px;
   margin: 20px 0 0 0;
@@ -94,3 +94,31 @@ p {
   margin: 0;
   line-height: 1.4;
 }
+
+							/* Section 2 style */
+
+.section2heading h2 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 38px;
+  margin: 0 30px;
+}
+
+.section2scroll {
+  background-color: black;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 20px;
+}
+
+.section2scrollitem {
+  display: inline-block;
+  color: white;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.section2scrollitem img {
+  width: 200px;
+}
+
+
