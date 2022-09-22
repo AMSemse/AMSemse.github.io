@@ -110,12 +110,6 @@ body {
   padding: 20px;
 }
 
-.section2scroll:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .section2scrollitem {
   display: inline-block;
   color: white;
