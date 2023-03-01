@@ -1,0 +1,91 @@
+/* Color Palette https://colorhunt.co/palette/222831393e4600adb5eeeeee */
+
+body{
+  margin: 0;
+  background-color: #222831;
+}
+
+p{
+  font-family: Roboro, Arial;
+  margin: 0;
+  display: inline;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* very important */
+img{
+  width: 100%;
+  height: 100%;
+}
+/*^^^^^^^^^^^^^^^^*/
+
+footer{
+  text-align: center;
+  background-color: #393E46;
+  color: #EEEEEE;
+}
+
+/* Top navigation bar */
+/* Miten sain asiat keskelle https://www.jakpsatweb.cz/css/css-vertical-center-solution.html */
+nav{
+  background-color: #393E46;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.top-left-logo-box{
+  display: inline;
+}
+
+.top-left-logo{
+  width: 5rem;
+  margin: 0 0 0 1rem;
+  vertical-align: top;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.top-left-text-box{
+  display: inline;
+}
+
+.top-left-text{
+  font-weight: 700;
+  font-size: 5rem;
+  color: #00ADB5;
+  margin: 0 2rem 0 1rem;
+  text-shadow: 2px 2px 4px #000000;
+  cursor: pointer;
+}
+
+/* Kissa kortit */
+.cat-pictures{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* <-- no idea miten toimii mut https://www.youtube.com/watch?v=qII5BueXWD4 */
+  grid-auto-rows: minmax(20vw, 250px);
+  grid-gap: 0.5em;
+}
+
+.cat-picture-box{
+  margin: 0.5em;
+  background-color: #393E46;
+  box-shadow: 2px 2px 4px #000000;
+  border-radius: 1em;
+  padding: 0.2em;
+  transition: all 0.3s ease;
+}
+
+.cat-picture-box:hover{
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 10px #000000;
+}
+
+.cat-thumbnail{
+  object-fit: cover;                                            /* <-- https://www.youtube.com/watch?v=ouhTJcfsovw */
+  border-radius: 1em;
+}
