@@ -12,6 +12,8 @@ p{
 }
 
 a{
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -63,10 +65,27 @@ nav{
   cursor: pointer;
 }
 
+.headerlinkbox{
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px black solid;
+  transition: all 0.3s ease;
+}
+.headerlinkbox:hover{
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 5px #000000;
+}
+
+.headerlink{
+  color: #00ADB5;
+  cursor: pointer;
+}
+
+
 /* Kissa kortit */
 .cat-pictures{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* <-- no idea miten toimii mut https://www.youtube.com/watch?v=qII5BueXWD4 */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* <-- no idea miten toimii mut https://www.youtube.com/watch?v=qII5BueXWD4 */
   grid-auto-rows: minmax(20vw, 250px);
   grid-gap: 0.5em;
 }
@@ -88,4 +107,28 @@ nav{
 .cat-thumbnail{
   object-fit: cover;                                            /* <-- https://www.youtube.com/watch?v=ouhTJcfsovw */
   border-radius: 1em;
+}
+
+/* Memory game style */
+
+.tiles{
+  margin: 48px auto;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 16px;
+}
+
+.tile{
+  height: 100px;
+  background: #393E46;
+  border: 3px solid #00ADB5;
+  border-radius: 1em;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #000000;
+  transition: all 0.3s ease;
+}
+.tile:hover{
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 7px #000000;
 }
