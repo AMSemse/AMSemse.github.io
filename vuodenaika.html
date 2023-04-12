@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="teksti"></p>
+
+    <script>
+        var syntKu = prompt("Missä kuussa olet syntynyt?")
+        var syntKuLower = syntKu.toLowerCase()
+
+        var text = document.getElementById("teksti")
+
+        if(syntKuLower == "joulukuu" || syntKuLower == "tammikuu" || syntKuLower == "helmikuu") {
+            teksti.innerHTML = "Olet syntynyt talvella!";
+        }
+        if(syntKuLower == "maaliskuu" || syntKuLower == "huhtikuu" || syntKuLower == "toukokuu") {
+            teksti.innerHTML = "Olet syntynyt keväällä!";
+        } 
+        if(syntKuLower == "kesäkuu" || syntKuLower == "heinäkuu" || syntKuLower == "elokuu") {
+            teksti.innerHTML = "Olet syntynyt kesällä!";
+        } 
+        if(syntKuLower == "syyskuu" || syntKuLower == "lokakuu" || syntKuLower == "marraskuu") {
+            teksti.innerHTML = "Olet syntynyt syksyllä!";
+        } 
+        
+
+    </script>
+</body>
+</html>
