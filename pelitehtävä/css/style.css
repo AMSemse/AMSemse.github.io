@@ -1,0 +1,16 @@
+#gameArea {
+    border: 4px solid green;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../img/supersaiuanacat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    overflow: hidden; /*Hide scrollbars*/
+}
+h1 {
+    font-family: sans-serif;
+}
