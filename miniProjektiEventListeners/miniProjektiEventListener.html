@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/eventListenerStyles.css">
+</head>
+<body>
+
+    <fieldset>
+        <legend>Background</legend>
+        <div>
+            <input type="checkbox" id="bg-cb-dog" class="js-bg-dog">
+            <label for="bg-cb-dog">Dog</label>
+        </div>
+        <div>
+            <input type="checkbox" id="bg-cb-cat" class="js-bg-cat">
+            <label for="bg-cb-cat">Cat</label>
+        </div>
+    </fieldset>
+
+    <script>
+        var bgDog = document.querySelector(".js-bg-dog")
+        var bgCat = document.querySelector(".js-bg-cat")
+        var body = document.querySelector("body")
+
+        
+
+        bgDog.addEventListener('click', function(event) {
+            if(bgDog.checked) {
+                body.style.height = '100vh'
+                body.style.backgroundImage = 'url("../img/dog.webp")'
+            }
+        }
+
+    </script>
+
+</body>
+</html>
