@@ -3,13 +3,14 @@ const ctx = canvas.getContext("2d");
 
 let x = 100;
 let y = 100;
-let radius = 50;
-let speed = 10;
+let radius = 25;
+let speed = 20;
 
 let upPressed = false;
 let downPressed = false;
 let leftPressed = false;
 let rightPressed = false;
+
 
 function drawGame() {
   requestAnimationFrame(drawGame);
@@ -54,18 +55,18 @@ function inputs() {
 }
 
 function drawGreenBlob() {
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "blue";
   if (upPressed) {
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "blue";
   }
   if (downPressed) {
     ctx.fillStyle = "blue";
   }
   if (leftPressed) {
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "blue";
   }
   if (rightPressed) {
-    ctx.fillStyle = "purple";
+    ctx.fillStyle = "blue";
   }
 
   ctx.beginPath();
@@ -74,7 +75,7 @@ function drawGreenBlob() {
 }
 
 function clearScreen() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "rgba(200, 0, 0, 0.3)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
