@@ -21,19 +21,30 @@
         </div>
     </fieldset>
 
-    <script>
-        var bgDog = document.querySelector(".js-bg-dog")
-        var bgCat = document.querySelector(".js-bg-cat")
-        var body = document.querySelector("body")
 
+    <script>
+        var bgDog = document.querySelector(".js-bg-dog");
+        var bgCat = document.querySelector(".js-bg-cat");
+        var body = document.querySelector("body");
         
 
-        bgDog.addEventListener('click', function(event) {
-            if(bgDog.checked) {
-                body.style.height = '100vh'
-                body.style.backgroundImage = 'url("../img/dog.webp")'
+        function changeBg() {
+            if (bgDog.checked) {
+                body.style.backgroundImage = 'url("img/dog.webp")';
+                body.style.backgroundRepeat = 'no-repeat';
+                body.style.backgroundSize = 'cover';
+                body.style.overflow = 'hidden';
+            } else if (bgCat.checked) {
+                body.style.backgroundImage = 'url("img/cat.jpg")';
+                body.style.backgroundRepeat = 'no-repeat';
+                body.style.backgroundSize = 'cover';
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.backgroundImage = '';
             }
-        }
+        };
+        document.querySelector('.js-bg-dog').addEventListener('change', changeBg);
+        document.querySelector('.js-bg-cat').addEventListener('change', changeBg);
 
     </script>
 
