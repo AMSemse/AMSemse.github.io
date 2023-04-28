@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset style="width: fit-content;">
+        <legend>Cars</legend>
+        <div>
+            <input type="checkbox" id="volvo-car" class="volvo-car">
+            <label for="volvo-car">Volvo</label>
+        </div>
+        <div>
+            <input type="checkbox" id="saab-car" class="saab-car">
+            <label for="saab-car">Saab</label>
+        </div>
+        <div>
+            <input type="checkbox" id="opel-car" class="opel-car">
+            <label for="opel-car">Opel</label>
+        </div>
+        <div>
+            <input type="checkbox" id="audi-car" class="audi-car">
+            <label for="audi-car">Audi</label>
+        </div>
+    </fieldset>
+
+    <p class="text"></p>
+
+    <script>
+        var checkVolvo = document.querySelector(".volvo-car")
+        var checkSaab = document.querySelector(".saab-car")
+        var checkOpel = document.querySelector(".opel-car")
+        var checkAudi = document.querySelector(".audi-car")
+
+        const text = document.querySelector(".text")
+
+        class Car {
+            constructor(make, model, year) {
+            this.make = make
+            this.model = model
+            this.year = Number(year)
+            }
+        }
+
+        var volvo = new Car("volvo", "v470", 1996)
+        var saab = new Car("Saab", "900", 1994)
+        var opel = new Car("Opel", "Astra", 1995)
+        var audi = new Car("Audi", "A4", 1994)
+
+
+        function changeCar() {
+            if (checkVolvo.checked) {
+                text.innerHTML = JSON.stringify(volvo);
+            } else if (checkSaab.checked) {
+                text.innerHTML = JSON.stringify(saab);
+            } else if (checkOpel.checked) {
+                text.innerHTML = JSON.stringify(opel);
+            } else if (checkAudi.checked) {
+                text.innerHTML = JSON.stringify(audi);
+            } else {
+                text.innerHTML = ''
+            }
+        };
+        document.querySelector('.volvo-car').addEventListener('change', changeCar);
+        document.querySelector('.saab-car').addEventListener('change', changeCar);
+        document.querySelector('.opel-car').addEventListener('change', changeCar);
+        document.querySelector('.audi-car').addEventListener('change', changeCar);
+
+        
+    </script>
+
+</body>
+</html>
