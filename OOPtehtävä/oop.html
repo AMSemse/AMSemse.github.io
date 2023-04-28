@@ -46,21 +46,21 @@
             }
         }
 
-        var volvo = new Car("volvo", "v470", 1996)
-        var saab = new Car("Saab", "900", 1994)
-        var opel = new Car("Opel", "Astra", 1995)
-        var audi = new Car("Audi", "A4", 1994)
+        var volvo = new Car("Volvo ", " v470   ", 1996)
+        var saab = new Car("Saab ", " 900   ", 1994)
+        var opel = new Car("Opel ", " Astra   ", 1995)
+        var audi = new Car("Audi ", " A4   ", 1994)
 
 
         function changeCar() {
             if (checkVolvo.checked) {
-                text.innerHTML = JSON.stringify(volvo);
+                text.innerHTML = volvo.make + volvo.model + volvo.year
             } else if (checkSaab.checked) {
-                text.innerHTML = JSON.stringify(saab);
+                text.innerHTML = saab.make + saab.model + saab.year
             } else if (checkOpel.checked) {
-                text.innerHTML = JSON.stringify(opel);
+                text.innerHTML = opel.make + opel.model + opel.year
             } else if (checkAudi.checked) {
-                text.innerHTML = JSON.stringify(audi);
+                text.innerHTML = audi.make + audi.model + audi.year
             } else {
                 text.innerHTML = ''
             }
