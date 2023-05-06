@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h1>OOP Modal</h1>
+
+  <div class="modal js-modal">
+    <div class="modal-content">
+      <h1 class="js-modal-title">Hello World</h1>
+      <p class="js-modal-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptates assumenda expedita obcaecati provident soluta maiores, atque quam, excepturi incidunt hic repellat? Unde, tempore obcaecati ut laudantium, atque tempora iste numquam accusamus dolore velit, accusantium veritatis earum! Dolore adipisci nam ipsa assumenda quia ducimus ex tenetur exercitationem voluptatum totam! Ea!</p>
+      <p><button class="js-close-modal">Close</button></p>
+    </div>
+  </div>
+  <button class="js-open-modal">Open</button>
+
+  <script>
+    class Modal {
+      constructor() {
+        this.modal = document.querySelector(".js-modal")
+      }
+            
+      open() {
+        this.modal.style.display = "initial"
+      }
+
+      close() {
+        this.modal.style.display = "none"
+      }
+
+      changeContent(title, text) {
+        if(title !== undefined){
+          this.modal.querySelector(".js-modal-title").innerText = title
+        }
+        if(text !== undefined) {
+          this.modal.querySelector(".js-modal-text").innerText = text
+        }
+      }
+    }
+
+    const openBtn = document.querySelector(".js-open-modal")
+    const closeBtn = document.querySelector(".js-close-modal")
+    const modal = new Modal()
+
+    openBtn.addEventListener('click', function(event) {
+      modal.open()
+    })
+
+    closeBtn.addEventListener('click', function(event) {
+      modal.close()
+    })
+
+    
+  </script>
+</body>
+</html>
