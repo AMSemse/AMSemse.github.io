@@ -1,11 +1,11 @@
-body {
-    display: flex;
-    justify-content: center;
-}
+
 
 fieldset {
     width: fit-content;
 }
 
-
+.centerBox {
+    display: flex;
+    justify-content: center;
+}
 

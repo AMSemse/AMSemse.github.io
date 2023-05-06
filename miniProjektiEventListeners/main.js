@@ -66,9 +66,8 @@
 
  function frame() {
      handle_collision();
-     dvd.style.top = dvd.offsetTop + y_incr;
-     dvd.style.left = dvd.offsetLeft + x_incr;
+     dvd.style.top = dvd.offsetTop + y_incr + 'px';
+     dvd.style.left = dvd.offsetLeft + x_incr + 'px';
  }
-
  
- document.querySelector("#btn").addEventListener('click', init);
+document.querySelector("#btn").addEventListener('click', init);
