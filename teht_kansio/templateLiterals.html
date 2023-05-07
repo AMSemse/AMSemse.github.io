@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="col-one">
+    <label for="name">What's your name?</label>
+    <input type="text" id="name">
+    <label for="year">How old are you?</label>
+    <input type="number" id="age">
+    <label for="color">What's your favorite color?</label>
+    <input type="color" id="color">
+    <input type="submit" id="btn">
+  </div>
+
+  <div class="col-two">
+    <p id="output"></p>
+  </div>
+
+
+  <script>
+    const output = document.querySelector("#output");
+
+    function showText() {
+      let name = document.querySelector("#name").value;
+      let age = document.querySelector("#age").value;
+      let color = document.querySelector("#color").value;
+
+      output.innerHTML = `Your name is ${name}. You are ${age} years old. Your favorite color is ${color}`
+    }
+
+    document.querySelector("#btn").addEventListener('click', showText);
+  </script>
+</body>
+</html>
