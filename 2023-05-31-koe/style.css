@@ -1,0 +1,12 @@
+body {
+    background-color: #d7d7d7;
+}
+
+p {
+    color: blue;
+}
+
+h1,
+h2 {
+    color: red;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn" onclick="btnfunction()">Syötä</button>
+
+    <h1>Otsikko</h1>
+    <h2>Otsikko2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, voluptates, dignissimos eius officiis repudiandae officia fugiat sint voluptate earum laudantium, eos omnis quisquam nam deserunt corporis. Porro iusto commodi nulla.</p>
+
+
+
+    <script>
+        var title = document.querySelector("#title");
+
+        function btnfunction() {
+            let input = prompt("Write something here.")
+
+            title.innerText = input
+        };
+
+    </script>
+</body>
+</html>
