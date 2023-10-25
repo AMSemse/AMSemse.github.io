@@ -17,11 +17,12 @@
     <div class="container">
         <div class="row">
             <label for="laskin">Laskin</label>
-            <input type="button" id="laskin">
+            <input type="text" id="laskin">
         </div>
         <div class="row">
             <label for="select">Laskutoimitus</label>
             <select id="select" name="select">
+                <option value=""></option>
                 <option value="+">+</option>
                 <option value="-">-</option>
                 <option value="*">*</option>
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div class="container-fluid pt-3">
-        <div class="row">
+        <div class="row calculator-keys">
             <div class="col">
                 <p class="bg-primary text-white text-center button" id="7">7</p>
                 <p class="bg-primary text-white text-center button" id="4">4</p>
@@ -41,13 +42,13 @@
                 <p class="bg-primary text-white text-center button" id="8">8</p>
                 <p class="bg-primary text-white text-center button" id="5">5</p>
                 <p class="bg-primary text-white text-center button" id="2">2</p>
-                <p class="bg-primary text-white text-center button" id="pilkku">,</p>
+                <p class="bg-primary text-white text-center button" id="pilkku">.</p>
             </div>
             <div class="col">
                 <p class="bg-primary text-white text-center button" id="9">9</p>
                 <p class="bg-primary text-white text-center button" id="6">6</p>
                 <p class="bg-primary text-white text-center button" id="3">3</p>
-                <p class="bg-primary text-white text-center button" id="c">C</p>
+                <p class="bg-primary text-white text-center button" id="clear">C</p>
             </div>
             <div class="col">
                 <p class="bg-primary text-white text-center pt-5 pb-5 button" id="yhtakuin">=</p>
