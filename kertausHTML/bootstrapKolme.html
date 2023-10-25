@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid p-5 bg-primary text-white">
+        <h1 class="">Ilmoita tähtihavainnosta</h1>
+    </div>
+    <div class="container-fluid">
+        <form action="https://slcode.alwaysdata.net/formtest/read.php" method="post">
+            <label for="paivamaara">Päivämäärä</label>
+            <input type="date" id="paivamaara" name="paivamaara" class="form-control">
+            <br>
+            <label for="kellonaika">Tapahtuma alkuaika</label>
+            <input type="time" id="kellonaika" name="kellonaika" class="form-control">
+            <br>
+            <label for="paikka">Tapahtumapaikka</label>
+            <input type="text" id="paikka" name="paikka" class="form-control">
+            <br>
+            <label for="kuvaus">Tapahtumankuvaus</label>
+            <textarea id="kuvaus" name="kuvaus" placeholder="Kirjoita kuvaus tähän" class="form-control"></textarea>
+            <br>
+            <label for="nimi">Havainnon tekijän nimi</label>
+            <input type="text" id="nimi" name="nimi" class="form-control">
+            <br>
+            <label for="sahkoposti">Sähköpostiosoite</label>
+            <input type="email" id="sahkoposti" name="sahkoposti" class="form-control">
+            <br>
+            <label for="puhelin">Puhelinnumero</label>
+            <input type="number" id="puhelin" name="puhelin" class="form-control">
+            <br>
+            <input type="checkbox" id="tiedot" name="tiedot">
+            <label for="tiedot">Havainnon yhteydessä saa näkyä tietoni</label>
+            <br>
+            <input type="submit" value="Lähetä tiedot" class="btn bg-primary text-white">
+        </form>
+    </div>
+</body>
+</html>

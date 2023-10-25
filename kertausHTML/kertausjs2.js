@@ -1,0 +1,1 @@
+document.getElementById("viikonpaiva").innerHTML = "Tänään on tiistai";

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ilmoita tähtihavainnosta</h1>
+    <form action="https://slcode.alwaysdata.net/formtest/read.php" method="post">
+        <label for="paivamaara">Päivämäärä</label>
+        <input type="date" id="paivamaara" name="paivamaara">
+        <br>
+        <label for="kellonaika">Tapahtuma alkuaika</label>
+        <input type="time" id="kellonaika" name="kellonaika">
+        <br>
+        <label for="paikka">Tapahtumapaikka</label>
+        <input type="text" id="paikka" name="paikka">
+        <br>
+        <label for="kuvaus">Tapahtumankuvaus</label>
+        <textarea id="kuvaus" name="kuvaus" placeholder="Kirjoita kuvaus tähän"></textarea>
+        <br>
+        <br>
+        <label for="nimi">Havainnon tekijän nimi</label>
+        <input type="text" id="nimi" name="nimi">
+        <br>
+        <label for="sahkoposti">Sähköpostiosoite</label>
+        <input type="email" id="sahkoposti" name="sahkoposti">
+        <br>
+        <label for="puhelin">Puhelinnumero</label>
+        <input type="number" id="puhelin" name="puhelin">
+        <br>
+        <input type="checkbox" id="tiedot" name="tiedot">
+        <label for="tiedot">Havainnon yhteydessä saa näkyä tietoni</label>
+        <br>
+        <input type="submit" value="Lähetä tiedot" >
+    </form>
+</body>
+</html>
