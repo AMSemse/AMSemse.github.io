@@ -1,22 +1,85 @@
-const nappi = document.getElementById("btn");
+const nappi = document.getElementById("addBtn");
 nappi.addEventListener("click", myFunction);
 
+const poistoNappi = document.getElementById("removeBtn");
+poistoNappi.addEventListener("click", removeFunction);
+
+const ul = document.querySelector("#unorderedList");
+
+let currentList = [];
+
+load();
+//let input;
+//let ulTyped;
+
 function myFunction() {
-    let input = document.getElementById("input").value;
-    let list = document.getElementById("ulTyped");
+    input = document.getElementById("input").value;
+    //console.log(input);
+    currentList.push(input + "Poista");
+    localStorage.setItem("listItems", JSON.stringify(currentList));
 
-    let ul = document.createElement("ul");
-    ul.setAttribute("");
+    let li = document.createElement("li");
+    li.setAttribute("class", "list-group-item");
+    li.setAttribute("value", input);
 
-    document.getElementById("renderList").appendChild(ul);
+    let btn = document.createElement("button");
+    btn.setAttribute("class", "btn btn-danger");
+    btn.innerText = "Poista"
+    btn.addEventListener("click", removeBtnFunction);
 
-    function renderProductList(element, index, arr) {
-        let li = document.createElement("li");
-        li.setAttribute("");
+    li.innerText = input;
 
-        ul.appendChild(li);
+    li.appendChild(btn);
+    ul.appendChild(li);
 
-        li.innerHTML = li.innerHTML + element;
+    console.log(localStorage.getItem("listItems"));
+    //console.log(currentList);
+}
+
+function removeFunction() {
+    const index = currentList.findIndex(e => e == ul.lastElementChild.innerText);
+    currentList.splice(index, 1);
+    ul.removeChild(ul.lastElementChild);
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("listItems", JSON.stringify(currentList));
     }
 
+    console.log(localStorage.getItem("listItems"));
 }
+function removeBtnFunction() {
+    let index = currentList.findIndex(e => e == this.parentNode.innerText);
+    currentList.splice(index, 1)
+    this.parentNode.remove();
+
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("listItems", JSON.stringify(currentList));
+    }
+
+    console.log(localStorage.getItem("listItems"));
+    //console.log(this.parentNode.value);
+}
+
+function load() {
+    if (typeof (Storage) !== "undefined") {
+        let savedItems = JSON.parse(localStorage.getItem("listItems"));
+        savedItems.forEach(e => {
+            let li = document.createElement("li");
+            li.setAttribute("class", "list-group-item");
+            li.setAttribute("value", e);
+
+            let btn = document.createElement("button");
+            btn.setAttribute("class", "btn btn-danger");
+            btn.innerText = "Poista"
+            btn.addEventListener("click", removeBtnFunction);
+
+            li.innerText = e.replace("Poista", "");
+
+            li.appendChild(btn);
+            ul.appendChild(li);
+
+            console.log(localStorage.getItem("listItems"));
+
+        });
+        currentList = savedItems;
+    }
+};
