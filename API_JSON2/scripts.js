@@ -1,7 +1,7 @@
 const app = document.getElementById('root');
 
-const container = document.createElement('div');
-container.setAttribute('class', 'container');
+const form = document.createElement('form');
+form.setAttribute('class', '');
 
 
 var request = new XMLHttpRequest();
@@ -15,36 +15,47 @@ request.open('GET', 'https://opentdb.com/api.php?amount=10&category=9&difficulty
 //https://opentdb.com/api_token.php?command=reset
 
 request.onload = function () {
-    var data = JSON.parse(this.response);
-    
+    let data = JSON.parse(this.response);
+    console.log(Object.values(data));
+    console.log(data);
+
     if (data.response_code == 0) {
-        data.forEach((results) => {
+        data.results.forEach((results) => {
             const card = document.createElement('div')
-            card.setAttribute('class', 'card')
-/*
-            const h4 = document.createElement('h4')
-            h4.textContent = results.question
-*/
+            card.setAttribute('class', 'form')
+
             const p = document.createElement('p')
-            p.textContent = `${results.question}...`
+            p.textContent = `${results.question}`;
 
-            results.forEach(correct_answer){
-            const label = document.createElement('label')
-            label.setAttribute('for', '')
+            
+            const label = document.createElement('label');
+            label.setAttribute('for', results.correct_answer);
+            label.textContent = `${results.correct_answer}`;
 
-            const checkbox = document.createElement('input')
-            checkbox.setAttribute('type', 'checkbox')
-            checkbox.setAttribute('name', '')
-            checkbox.setAttribute('value', '')
+            const checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            checkbox.setAttribute('name', results.correct_answer);
+            checkbox.setAttribute('value', results.correct_answer);
 
+            form.appendChild(card);
+            card.appendChild(p);
 
+            results.incorrect_answers.forEach((incorrect_answers) => {
+                const label = document.createElement('label');
+                label.setAttribute('for', incorrect_answers);
+                label.textContent = `${incorrect_answers}`;
 
-            container.appendChild(card)
-            //card.appendChild(h4)
-            card.appendChild(p)
-            card.appendChild(checkbox)
-            card.appendChild(label)
-            }
+                const checkbox = document.createElement('input');
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.setAttribute('name', incorrect_answers);
+                checkbox.setAttribute('value', incorrect_answers);
+
+                card.appendChild(checkbox);
+                card.appendChild(label);
+            });
+
+            card.appendChild(checkbox);
+            card.appendChild(label);
         });
     } else {
         const errorMessage = document.createElement('marquee')
@@ -52,7 +63,13 @@ request.onload = function () {
 
         app.appendChild(errorMessage)
     }
-    
-};
 
-//request.send();
+};
+const submitButton = document.createElement('button')
+submitButton.setAttribute('type', 'submit')
+submitButton.textContent = 'Submit'
+form.appendChild(submitButton)
+app.appendChild(form);
+
+
+request.send();
